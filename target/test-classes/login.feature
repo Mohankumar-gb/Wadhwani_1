@@ -57,7 +57,7 @@ Feature: Login cucumber
       | admin@admin.com | ADMIN   |
 
   #Courses Module
-  @tags6
+  @tag6
   Scenario: Joining courses
     Given User should be in home page
     When User should click on course
@@ -124,13 +124,121 @@ Feature: Login cucumber
     Then Faculty should click on view quizz Results
 
   @tag17
+  Scenario: Faculty should take quizz
+    Given Faculty should attempt Quizz
+    When Faculty should take quizz
+    Then Faculty should click on submit
+
+  @tag18
   Scenario: Verify Faculty should view Practice Venture
     Given Faculty  dhould bein Quizzes
     When Faculty should see th Practice Venture
     Then Faculty should click on Practice Venture
 
-  @tag18
+  @tag19
   Scenario: Verify Faculty should view PV Milestones
     Given Faculty is in Quizzes
     When Faculty should see th PV Milestones
     Then Faculty should click on PV Milestones
+
+  @tag20
+  Scenario: Verify Faculty should click on faculty notes
+    Given Faculty is in Quizzes Module
+    When Faculty should see th Faculty Notes
+    Then Faculty should click on Faculty Notes
+
+  @tag21
+  Scenario: Verify Faculty should see the lessons
+    Given Faculty should be in QuizzesModule
+    When Faculty should see the lessons
+    Then Faculty should click on lessons
+
+  @tag22
+  Scenario: Verify Faculty should click on report tab
+    Given Faculty should login To thePage
+    When Faculty should see the report module
+    Then Faculty should click on Report Module
+
+  @tag23
+  Scenario: Verify Faculty should click on Notification icon
+    Given Faculty should login
+    When Faculty should see the Notification icon
+    Then Faculty should click onNotification icon
+
+  @tag24
+  Scenario: Faculty should take quizz again
+    Given Faculty should attempt Quizz again
+    When Faculty should take quizz again
+    Then Faculty should Re-attempt quizz
+
+  @tag25
+  Scenario: Faculty should be in teaching mode
+    Given Faculty should be inCoursE
+    When Faculty should click on START COURSe
+    Then Faculty should click on teaching
+
+  @tag26
+  Scenario: Faculty should be in Manage Batches
+    Given Faculty is inCoursE
+    When Faculty should see the Manage Batches
+    Then Faculty should click on Manage Batches
+
+  @tag27
+  Scenario: Faculty should EDIT Manage Batches
+    Given Faculty Should Be inCoursEPage
+    When Faculty should see the edit symbol Manage Batches
+    Then Faculty should click onedit symbol Manage Batches
+
+  @tag28
+  Scenario: Faculty should be in Chat box Manage Batches
+    Given Faculty is inCoursEPage
+    When Faculty should see the Chat box
+    Then Faculty should click on Chat box
+
+  @tag29
+  Scenario: Faculty should be in Manage Students
+    Given Faculty is ManageBATches
+    When Faculty should see the Manage Students
+    Then Faculty should click on Manage Students
+
+  @tag30
+  Scenario: Faculty should be in Run lessons
+    Given Facultyis in CoursE page
+    When Faculty should see the Run lessons
+    Then Faculty should click on Run lessons
+
+  @tag31
+  Scenario: Faculty should be in No Upcoming Module
+    Given Faculty view CoursE pages
+    When Faculty should see the No Upcoming Module
+    Then Faculty should click on No Upcoming Module
+
+  @tag32
+  Scenario: Faculty should Close Batch
+    Given Faculty should be in active batches (Manage Batches) page
+    When Faculty should see the Close Batch
+    Then Faculty should click on Close Batch
+
+  @tag33
+  Scenario: Faculty should ReOpen batch
+    Given Faculty should be in active batches
+    When Faculty should see the ReOpen batch
+    Then Faculty should click on ReOpen batch
+
+  @tag34
+  Scenario: Faculty should share his thoughts through chat
+    Given Faculty should be in ACtiveBatches
+    When Faculty should see chatIcon
+    Then Faculty should click on  chat icon and share his thoughts
+
+  @tag35
+  Scenario: Faculty should send his thoughts
+    Given Faculty is in ActiveBatches page
+    When Faculty should see the CHatBox
+    Then Faculty should click on send
+
+  @tag36
+  Scenario: Faculty should save and submit quizz
+    Given Faculty should view quizz
+    When Faculty should see the Save and continue
+    Then Faculty should click save and submit
