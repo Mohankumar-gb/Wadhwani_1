@@ -5,33 +5,49 @@ formatter.feature({
   "keyword": "Feature"
 });
 formatter.scenarioOutline({
-  "name": "Login Functionality with invalid password",
+  "name": "Join button is click or not with entering batchid",
   "description": "",
   "keyword": "Scenario Outline",
   "tags": [
     {
-      "name": "@tags19"
+      "name": "@tags36"
     }
   ]
 });
 formatter.step({
-  "name": "Faculty is on the Learnwise Login Page",
+  "name": "Student is on the Learnwise staging Login Page",
   "keyword": "Given "
 });
 formatter.step({
-  "name": "Faculty should enter invalid \"\u003cusername\u003e\"",
+  "name": "Student should enter an valid email\"\u003cusername\u003e\"",
   "keyword": "When "
 });
 formatter.step({
-  "name": "Faculty should click next Button",
+  "name": "Student click the next Button",
   "keyword": "And "
 });
 formatter.step({
-  "name": "Faculty should enter the invalid password\"\u003cpassword\u003e\"",
+  "name": "student enter the password\"\u003cpassword\u003e\"",
   "keyword": "Then "
 });
 formatter.step({
-  "name": "Faculty should verify its  success message",
+  "name": "Student click the signin Button",
+  "keyword": "Then "
+});
+formatter.step({
+  "name": "Student click the  course Button",
+  "keyword": "Then "
+});
+formatter.step({
+  "name": "Student enter the batch id\"\u003cid\u003e\"",
+  "keyword": "Then "
+});
+formatter.step({
+  "name": "Student click an join Button",
+  "keyword": "Then "
+});
+formatter.step({
+  "name": "Student should verify its join button  click ornot",
   "keyword": "Then "
 });
 formatter.examples({
@@ -42,76 +58,117 @@ formatter.examples({
     {
       "cells": [
         "username",
-        "password"
+        "password",
+        "id"
       ]
     },
     {
       "cells": [
-        "qapital.faculty@yopmail.com",
+        "samya@gmail.com",
+        "pass",
         "1234"
       ]
     }
   ]
 });
 formatter.scenario({
-  "name": "Login Functionality with invalid password",
+  "name": "Join button is click or not with entering batchid",
   "description": "",
   "keyword": "Scenario Outline",
   "tags": [
     {
-      "name": "@tags19"
+      "name": "@tags36"
     }
   ]
 });
 formatter.step({
-  "name": "Faculty is on the Learnwise Login Page",
+  "name": "Student is on the Learnwise staging Login Page",
   "keyword": "Given "
 });
 formatter.match({
-  "location": "StepDefinition1.facultyIsOnTheLearnwiseLoginPage()"
+  "location": "StepDefinition1.studentIsOnTheLearnwiseStagingLoginPage()"
 });
 formatter.result({
   "status": "passed"
 });
 formatter.step({
-  "name": "Faculty should enter invalid \"qapital.faculty@yopmail.com\"",
+  "name": "Student should enter an valid email\"samya@gmail.com\"",
   "keyword": "When "
 });
 formatter.match({
-  "location": "StepDefinition1.facultyShouldEnterInvalid(String)"
+  "location": "StepDefinition1.studentShouldEnterAnValidEmail(String)"
 });
 formatter.result({
   "status": "passed"
 });
 formatter.step({
-  "name": "Faculty should click next Button",
+  "name": "Student click the next Button",
   "keyword": "And "
 });
 formatter.match({
-  "location": "StepDefinition1.facultyShouldClickNextButton()"
+  "location": "StepDefinition1.studentClickTheNextButton()"
 });
 formatter.result({
   "status": "passed"
 });
 formatter.step({
-  "name": "Faculty should enter the invalid password\"1234\"",
+  "name": "student enter the password\"pass\"",
   "keyword": "Then "
 });
 formatter.match({
-  "location": "StepDefinition1.facultyShouldEnterTheInvalidPassword(String)"
+  "location": "StepDefinition1.studentEnterThePassword(String)"
 });
 formatter.result({
-  "error_message": "org.openqa.selenium.WebDriverException: Failed to convert data to an object\nBuild info: version: \u00273.141.59\u0027, revision: \u0027e82be7d358\u0027, time: \u00272018-11-14T08:17:03\u0027\nSystem info: host: \u0027rutisqq429\u0027, ip: \u0027192.168.43.24\u0027, os.name: \u0027Linux\u0027, os.arch: \u0027amd64\u0027, os.version: \u00275.4.0-42-generic\u0027, java.version: \u002716.0.2\u0027\nDriver info: org.openqa.selenium.firefox.FirefoxDriver\nCapabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 79.0, javascriptEnabled: true, moz:accessibilityChecks: false, moz:buildID: 20200720193547, moz:geckodriverVersion: 0.27.0, moz:headless: false, moz:processID: 11627, moz:profile: /tmp/rust_mozprofiley9VEX7, moz:shutdownTimeout: 60000, moz:useNonSpecCompliantPointerOrigin: false, moz:webdriverClick: true, pageLoadStrategy: normal, platform: LINUX, platformName: LINUX, platformVersion: 5.4.0-42-generic, rotatable: false, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}\nSession ID: 560047bc-522d-4f13-bee9-f58f555db6cc\n*** Element info: {Using\u003did, value\u003dpassword}\n\tat java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)\n\tat java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:78)\n\tat java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)\n\tat java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)\n\tat java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480)\n\tat org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)\n\tat org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)\n\tat org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)\n\tat org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)\n\tat org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)\n\tat org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)\n\tat org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:323)\n\tat org.openqa.selenium.remote.RemoteWebDriver.findElementById(RemoteWebDriver.java:372)\n\tat org.openqa.selenium.By$ById.findElement(By.java:188)\n\tat org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)\n\tat POM.LoginPom.facultyPassword(LoginPom.java:57)\n\tat com.stepDefinition.StepDefinition1.facultyShouldEnterTheInvalidPassword(StepDefinition1.java:491)\n\tat ✽.Faculty should enter the invalid password\"1234\"(src/test/resources/login.feature:212)\n",
-  "status": "failed"
+  "status": "passed"
 });
 formatter.step({
-  "name": "Faculty should verify its  success message",
+  "name": "Student click the signin Button",
   "keyword": "Then "
 });
 formatter.match({
-  "location": "StepDefinition1.facultyShouldVerifyItsSuccessMessage()"
+  "location": "StepDefinition1.studentClickTheSigninButton()"
 });
 formatter.result({
-  "status": "skipped"
+  "status": "passed"
+});
+formatter.step({
+  "name": "Student click the  course Button",
+  "keyword": "Then "
+});
+formatter.match({
+  "location": "StepDefinition1.studentClickTheCourseButton()"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.step({
+  "name": "Student enter the batch id\"1234\"",
+  "keyword": "Then "
+});
+formatter.match({
+  "location": "StepDefinition1.studentEnterTheBatchId(String)"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.step({
+  "name": "Student click an join Button",
+  "keyword": "Then "
+});
+formatter.match({
+  "location": "StepDefinition1.studentClickAnJoinButton()"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.step({
+  "name": "Student should verify its join button  click ornot",
+  "keyword": "Then "
+});
+formatter.match({
+  "location": "StepDefinition1.studentShouldVerifyItsJoinButtonClickOrnot()"
+});
+formatter.result({
+  "status": "passed"
 });
 });

@@ -62,10 +62,60 @@ public class LoginPom {
                           return driver.findElement(By.xpath("/html/body/div[3]/div/div/div[1]/header/div/div/div[2]/div/div/div/div[2]/form/button"));
                           }
                       
+                      public static WebElement dashboardButton(WebDriver driver) {
+                  		
+                          return driver.findElement(By.xpath("/html/body/div[2]/div[2]/div[2]/div/div[1]/div/div/ul/li[1]/a"));
+                          }
                       
                       
-                      
-                      
-                      
-                     
-	}
+                      public static WebElement indexButton(WebDriver driver) {
+                  		
+                          return driver.findElement(By.xpath("/html/body/div[4]/div[2]/div[1]/div/div[1]/div/div[1]/div[2]"));
+                          } 
+                  //    /html/body/div[4]/div[2]/div[1]/div/div[1]/div/div[2]/div[3]/div[1]/a/div
+                      public static WebElement resumeButton(WebDriver driver) {
+                    		
+                          return driver.findElement(By.xpath(" /html/body/div[4]/div[2]/div[1]/div/div[1]/div/div[2]/div[3]/div[1]/a/div"));
+                          } 
+                      public static WebElement coursePlan(WebDriver driver) {
+                  		
+                          return driver.findElement(By.xpath(" /html/body/div[4]/div[2]/div[1]/div/div[1]/div/div[2]/div[3]/div[2]/a/div"));
+                          } 
+                      ///html/body/div[4]/div[2]/div[1]/div/div[2]/div/div[1]
+	
+public static WebElement otherCourses(WebDriver driver) {
+		
+    return driver.findElement(By.xpath(" /html/body/div[4]/div[2]/div[1]/div/div[2]/div/div[1]/div[5]/a/div"));
+    } 
+public static WebElement studentcourses(WebDriver driver) {
+	
+    return driver.findElement(By.xpath(" /html/body/div[2]/div[2]/div[2]/div/div[1]/div/div/ul/li[2]/a"));
+    } 
+
+public static WebElement studentpassword(WebDriver driver) {
+	
+    return driver.findElement(By.id("password"));
+    } 
+public static WebElement studentcoursebatchid(WebDriver driver) {
+	
+    return driver.findElement(By.id("batchUniqueID"));
+    } 
+public static WebElement studentcoursebatchbutton(WebDriver driver) {
+	
+    return driver.findElement(By.id("batchJoinButton"));
+    } 
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+

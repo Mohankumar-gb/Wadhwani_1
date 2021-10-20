@@ -124,7 +124,7 @@ Then Student should tick the Eula checkbox
 Then Should should verify  successfully entered
 Examples:
 |username|code|username|passkey|password|     
-|rushikore@gmail.com|QAPI5260|rushikore@gmail.com|admin|admin|
+|admin@admin.com|QAPI5260|admin@admin.com|admin|admin|
 @tags13
 Scenario Outline: Login Functionality with valid credentials and tick the EULA checkbox
 Given Student is on the Learnwise Login Page
@@ -140,7 +140,7 @@ Then Student should click an Eula hyperlink
 Then Should should verify its successfully entered
 Examples:
 |username|code|username|passkey|password|     
-|rushikore@gmail.com|QAPI5260|rushikore@gmail.com|admin|admin|
+|admin@admin.com|QAPI5260|admin@admin.com|admin|admin|
 @tags14
 Scenario Outline: Signin button not enabled without entering three fields
 Given Student is on the Learnwise Login Page
@@ -242,7 +242,202 @@ Examples:
 
 
 
+@tags22
+Scenario Outline: Signin button is click or not
+Given Faculty is on the Learnwise Login Page
+When Faculty should enter an valid email"<username>" 
+And Faculty click the next Button
+Then Faculty enter the password"<password>"
+Then Faculty click on signin button
+Then Faculty should verify  successfully click 
+Examples:
+|username|password|   
+|qapital.faculty@yopmail.com|Pass@123|
 
+@tags23
+Scenario Outline: Dashboard is click or not
+Given Faculty is on the Learnwise Login Page
+When Faculty should enter an valid email"<username>" 
+And Faculty click the next Button
+Then Faculty enter the password"<password>"
+Then Faculty click on signin button
+Then click on dashboard Button
+Then Faculty should verify  dashboard successfully click 
+Examples:
+|username|password|   
+|qapital.faculty@yopmail.com|Pass@123|
+@tags24
+Scenario Outline: Index is click or not
+Given Faculty is on the Learnwise Login Page
+When Faculty should enter an valid email"<username>" 
+And Faculty click the next Button
+Then Faculty enter the password"<password>"
+Then Faculty click on signin button
+Then click on dashboard Button
+Then Faculty should click on index Button
+Then Faculty should verify index successfully click 
+Examples:
+|username|password|   
+|qapital.faculty@yopmail.com|Pass@123|
+@tags25
+Scenario Outline: Resume is click or not
+Given Faculty is on the Learnwise Login Page
+When Faculty should enter an valid email"<username>" 
+And Faculty click the next Button
+Then Faculty enter the password"<password>"
+Then Faculty click on signin button
+Then click on dashboard Button
+Then Faculty should click on Resume Button
+Then Faculty should verify resume successfully click 
+Examples:
+|username|password|   
+|qapital.faculty@yopmail.com|Pass@123|
+@tags26
+Scenario Outline: course plan is click or not
+Given Faculty is on the Learnwise Login Page
+When Faculty should enter an valid email"<username>" 
+And Faculty click the next Button
+Then Faculty enter the password"<password>"
+Then Faculty click on signin button
+Then click on dashboard Button
+Then Faculty should click on course plan Button
+Then Faculty should verify course plan successfully click 
+Examples:
+|username|password|   
+|qapital.faculty@yopmail.com|Pass@123|
+@tags27
+Scenario Outline: other course is click or not
+Given Faculty is on the Learnwise Login Page
+When Faculty should enter an valid email"<username>" 
+And Faculty click the next Button
+Then Faculty enter the password"<password>"
+Then Faculty click on signin button
+Then click on dashboard Button
+Then Faculty should click on other course Button
+Then Faculty should verify other course  successfully click 
+Examples:
+|username|password|   
+|qapital.faculty@yopmail.com|Pass@123|
+
+
+@tags28
+Scenario Outline: Login Functionality with valid credentials
+Given Faculty is on the Learnwise Login Page
+When Faculty should enter valid "<username>" 
+And Faculty should select next Button
+Then Faculty should verify an success message
+Examples:
+|username|
+|subham@gmail.com|
+
+@tags29
+Scenario Outline: Check next button is enabled or not
+Given faculty is on the Learnwise Login Page
+When faculty should not enter any mail id "<username>" 
+And faculty should check next button is enabled
+Then faculty should verify its enabled or not
+Examples:
+|username|
+||
+
+@tags30
+Scenario Outline: Login Functionality with invalid credentials
+Given faculty is on the Learnwise Login Page
+When faculty should enter invalid "<username>" 
+Then faculty should verify get accept message
+Examples:
+|username|
+|file123@gmail.com|
+
+@tags
+Scenario Outline: Login Functionality with valid credentials
+Given faculty is on the Learnwise Login Page
+When faculty should enter the valid email"<username>" 
+And faculty should select the next Button
+Then faculty should enter the valid password "<passkey>"
+Then faculty should verify passkey successfully entered
+Examples:
+|username|passkey|      
+|subham@gmail.com|pass|
+@tags
+Scenario Outline: Login Functionality with the valid credentials
+Given Student is on the Learnwise Login Page
+When Student should enter an valid email"<username>" 
+And Student should select an next Buttonimport org.junit.runner.RunWith;
+
+import cucumber.api.CucumberOptions;
+import cucumber.api.SnippetType;
+import cucumber.api.junit.Cucumber;
+@RunWith(Cucumber.class)
+@CucumberOptions(features= {"src/test/resources"},glue= {"com.stepDefinition"},
+tags= {"@tags36"},monochrome=true,dryRun=false,snippets = SnippetType.CAMELCASE,
+plugin = {"pretty","html:c:/home/qq429/eclipse-workspace/newmav/target/cucumber-reports/Cucumber.html"})
+
+
+public class FacultyPage {
+	
+	
+
+}
+Then Student should enter an valid password "<passkey>"
+Then Student should verify password successfully entered
+Examples:
+|username|passkey|      
+|rushikore@gmail.com|pass|
+@tags
+Scenario Outline: Course button is click or not
+Given Student is on the Learnwise staging Login Page
+When Student should enter an valid email"<username>" 
+And Student click the next Button
+Then student enter the password"<password>"
+Then Student click the signin Button
+Then Student click the  course Button
+Then Student should verify its course button successfully click 
+Examples:
+|username|password|      
+| samya@gmail.com|pass|
+
+@tags
+Scenario Outline: Join button is click or not without entering batchid
+Given Student is on the Learnwise staging Login Page
+When Student should enter an valid email"<username>" 
+And Student click the next Button
+Then student enter the password"<password>"
+Then Student click the signin Button
+Then Student click the  course Button
+Then Student click join Button
+Then Student should verify its join button successfully click 
+Examples:
+|username|password|      
+| samya@gmail.com|pass|
+@tags
+Scenario Outline: Join button is click or not with entering batchid
+Given Student is on the Learnwise staging Login Page
+When Student should enter an valid email"<username>" 
+And Student click the next Button
+Then student enter the password"<password>"
+Then Student click the signin Button
+Then Student click the  course Button
+Then Student enter the batch id"<id>"
+Then Student click join Button
+Then Student should verify its join button successfully click ornot
+Examples:
+|username|password|id|      
+| samya@gmail.com|pass|1234|
+@tags
+Scenario Outline: Join button is click or not with entering batchid
+Given Student is on the Learnwise staging Login Page
+When Student should enter an valid email"<username>" 
+And Student click the next Button
+Then student enter the password"<password>"
+Then Student click the signin Button
+Then Student click the  course Button
+Then Student enter the batch id"<id>"
+Then Student click an join Button
+Then Student should verify its join button  click ornot
+Examples:
+|username|password|id|      
+| samya@gmail.com|pass|1234|
 
 
 

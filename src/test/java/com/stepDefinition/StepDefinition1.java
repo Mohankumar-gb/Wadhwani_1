@@ -504,6 +504,249 @@ public void facultyShouldVerifyItsSuccessMessage() {
 Assert.assertTrue("get accept", Expectedtest.equals(actualtext));
 driver.quit();
 }
+@Then("Faculty enter the password{string}")
+public void facultyEnterThePassword(String string) {
+    LoginPom.facultyPassword(driver).sendKeys(string);
+}
+@Then("Faculty click on signin button")
+public void facultyClickOnSigninButton() {
+    LoginPom.facultySigninButton(driver).click();
+}
+
+@Then("Faculty should verify  successfully click")
+public void facultyShouldVerifySuccessfullyClick() {
+	String Expectedtest ="PLATFORM FEATURES";
+	String actualtext = driver.findElement(By.xpath("/html/body/div[3]/div/div/div[2]/div/div/h1")).getText();
+	System.out.println(actualtext);
+Assert.assertTrue("get accept", Expectedtest.equals(actualtext));
+driver.quit();
+}
+@Then("click on dashboard Button")
+public void clickOnDashboardButton() {
+	
+
+	
+    LoginPom.dashboardButton(driver).click();
+}
+
+@Then("Faculty should verify  dashboard successfully click")
+public void facultyShouldVerifyDashboardSuccessfullyClick() {
+	String Expectedtest ="© 2021 Wadhwani Foundation.";
+	String actualtext = driver.findElement(By.xpath("/html/body/div[6]/div/div[2]/span")).getText();
+	System.out.println(actualtext);
+Assert.assertTrue("get accept", Expectedtest.equals(actualtext));
+driver.quit();
+}
+@Then("Faculty should click on index Button")
+public void facultyShouldClickOnIndexButton() {
+    LoginPom.indexButton(driver).click();
+}
+
+@Then("Faculty should verify index successfully click")
+public void facultyShouldVerifyIndexSuccessfullyClick() {
+	String Expectedtest ="© 2021 Wadhwani Foundation.";
+	String actualtext = driver.findElement(By.xpath("/html/body/div[6]/div/div[2]/span")).getText();
+	System.out.println(actualtext);
+Assert.assertTrue("get accept", Expectedtest.equals(actualtext));
+driver.quit(); 
+}
+@Then("Faculty should click on Resume Button")
+public void facultyShouldClickOnResumeButton() {
+	
+
+    LoginPom.resumeButton(driver).click();
+}
+
+@Then("Faculty should verify resume successfully click")
+public void facultyShouldVerifyResumeSuccessfullyClick() {
+	String Expectedtest ="© 2021 Wadhwani Foundation.";
+	String actualtext = driver.findElement(By.xpath("/html/body/div[6]/div/div[2]/span")).getText();
+	System.out.println(actualtext);
+Assert.assertTrue("get accept", Expectedtest.equals(actualtext));
+driver.quit(); 
+}
+@Then("Faculty should click on course plan Button")
+public void facultyShouldClickOnCoursePlanButton() {
+	
+
+    LoginPom.coursePlan(driver).click();
+}
+
+@Then("Faculty should verify course plan successfully click")
+public void facultyShouldVerifyCoursePlanSuccessfullyClick() {
+
+	String Expectedtest ="© 2021 Wadhwani Foundation.";
+	String actualtext = driver.findElement(By.xpath("/html/body/div[6]/div/div[2]/span")).getText();
+	System.out.println(actualtext);
+Assert.assertTrue("get accept", Expectedtest.equals(actualtext));
+driver.quit(); 
+
+}
+@Then("Faculty should click on other course Button")
+public void facultyShouldClickOnOtherCourseButton() {
+   LoginPom.otherCourses(driver).click();
+}
+
+@Then("Faculty should verify other course  successfully click")
+public void facultyShouldVerifyOtherCourseSuccessfullyClick() {
+	String Expectedtest ="© 2021 Wadhwani Foundation.";
+	String actualtext = driver.findElement(By.xpath("/html/body/div[6]/div/div[2]/span")).getText();
+	System.out.println(actualtext);
+Assert.assertTrue("get accept", Expectedtest.equals(actualtext));
+driver.quit(); 
+}
+@When("Faculty should select next Button")
+public void facultyShouldSelectNextButton() {
+    LoginPom.nextBtn(driver).click();
+}
+
+@Then("Faculty should verify an success message")
+public void facultyShouldVerifyAnSuccessMessage() {
+	String Expectedtest ="PLATFORM FEATURES";
+	String actualtext = driver.findElement(By.xpath("/html/body/div[3]/div/div/div[2]/div/div/h1")).getText();
+	System.out.println(actualtext);
+Assert.assertTrue("get accept", Expectedtest.equals(actualtext));
+driver.quit();
+}
+@Given("faculty is on the Learnwise Login Page")
+public void facultyIsOnTheLearnwiseLoginPage1() {
+	WebDriverManager.firefoxdriver().setup();
+	driver = new FirefoxDriver();
+	driver.get("https://learnwise.wfglobal.org/");
+	driver.manage().window().maximize();
+	driver.manage().timeouts().implicitlyWait(100, TimeUnit.SECONDS);
+}
+
+@When("faculty should not enter any mail id {string}")
+public void facultyShouldNotEnterAnyMailId(String string) {
+    LoginPom.username(driver).sendKeys(string);
+}
+
+@When("faculty should check next button is enabled")
+public void facultyShouldCheckNextButtonIsEnabled() {
+    LoginPom.nextBtn(driver).click();
+}
+
+@Then("faculty should verify its enabled or not")
+public void facultyShouldVerifyItsEnabledOrNot() {
+	String Expectedtest ="PLATFORM FEATURES";
+	String actualtext = driver.findElement(By.xpath("/html/body/div[3]/div/div/div[2]/div/div/h1")).getText();
+	System.out.println(actualtext);
+Assert.assertTrue("get accept", Expectedtest.equals(actualtext));
+driver.quit();
+}
+
+@When("faculty should enter invalid {string}")
+public void facultyShouldEnterInvalid1(String string) {
+    LoginPom.username(driver).sendKeys(string);
+}
+
+@Then("faculty should verify get accept message")
+public void facultyShouldVerifyGetAcceptMessage() {
+	String Expectedtest ="PLATFORM FEATURES";
+	String actualtext = driver.findElement(By.xpath("/html/body/div[3]/div/div/div[2]/div/div/h1")).getText();
+	System.out.println(actualtext);
+Assert.assertTrue("get accept", Expectedtest.equals(actualtext));
+driver.quit();
+}
+@When("faculty should enter the valid email{string}")
+public void facultyShouldEnterTheValidEmail(String string) {
+    LoginPom.username(driver).sendKeys(string);
+}
+
+@When("faculty should select the next Button")
+public void facultyShouldSelectTheNextButton() {
+    LoginPom.nextBtn(driver).click();
+}
+
+@Then("faculty should enter the valid password {string}")
+public void facultyShouldEnterTheValidPassword(String string) {
+    LoginPom.passKey(driver).sendKeys(string);
+}
+
+@Then("faculty should verify passkey successfully entered")
+public void facultyShouldVerifyPasskeySuccessfullyEntered() {
+	String Expectedtest ="PLATFORM FEATURES";
+	String actualtext = driver.findElement(By.xpath("/html/body/div[3]/div/div/div[2]/div/div/h1")).getText();
+	System.out.println(actualtext);
+Assert.assertTrue("get accept", Expectedtest.equals(actualtext));
+driver.quit();
+}
+@Then("Student should verify password successfully entered")
+public void studentShouldVerifyPasswordSuccessfullyEntered1() {
+	String Expectedtest ="PLATFORM FEATURES";
+	String actualtext = driver.findElement(By.xpath("/html/body/div[3]/div/div/div[2]/div/div/h1")).getText();
+	System.out.println(actualtext);
+Assert.assertTrue("get accept", Expectedtest.equals(actualtext));
+driver.quit();
+}
+@Given("Student is on the Learnwise staging Login Page")
+public void studentIsOnTheLearnwiseStagingLoginPage() {
+	WebDriverManager.firefoxdriver().setup();
+	driver = new FirefoxDriver();
+	driver.get("https://staging.learnwise.wfglobal.org/#/IN/en/home/login");
+	driver.manage().window().maximize();
+	driver.manage().timeouts().implicitlyWait(100, TimeUnit.SECONDS);  
+}
+
+
+@Then("student should click the course Button")
+public void studentShouldClickTheCourseButton() {
+    LoginPom.studentcourses(driver).click();
+}
+@When("Student click the next Button")
+public void studentClickTheNextButton() {
+    LoginPom.nextBtn(driver).click();
+}
+
+@Then("student enter the password{string}")
+public void studentEnterThePassword(String string) {
+ LoginPom.studentpassword(driver).sendKeys(string);   
+}
+
+@Then("Student click the signin Button")
+public void studentClickTheSigninButton() {
+    LoginPom.facultySigninButton(driver).click();
+}
+
+@Then("Student click the  course Button")
+public void studentClickTheCourseButton() {
+	  LoginPom.studentcourses(driver).click();
+}
+
+
+@Then("Student should verify its course button successfully click")
+public void studentShouldVerifyItsCourseButtonSuccessfullyClick() {
+	driver.quit();
+}
+@Then("Student click join Button")
+public void studentClickJoinButton() {
+    LoginPom.studentcoursebatchbutton(driver).click();
+}
+
+@Then("Student should verify its join button successfully click")
+public void studentShouldVerifyItsJoinButtonSuccessfullyClick() {
+    driver.quit();
+}
+
+@Then("Student enter the batch id{string}")
+public void studentEnterTheBatchId(String string) {
+    LoginPom.studentcoursebatchid(driver).sendKeys(string);
+}
+
+@Then("Student should verify its join button successfully click ornot")
+public void studentShouldVerifyItsJoinButtonSuccessfullyClickOrnot() {
+  driver.quit();
+}
+@Then("Student click an join Button")
+public void studentClickAnJoinButton() {
+	LoginPom.studentcoursebatchbutton(driver).click();
+   }
+
+@Then("Student should verify its join button  click ornot")
+public void studentShouldVerifyItsJoinButtonClickOrnot() {
+    driver.quit();
+}
 
 
 
