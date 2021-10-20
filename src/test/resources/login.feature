@@ -242,3 +242,12 @@ Feature: Login cucumber
     Given Faculty should view quizz
     When Faculty should see the Save and continue
     Then Faculty should click save and submit
+    
+    
+    
+    @tag37
+    Scenario: Student should 
+    Given Student should 
+    When Student should see th
+    Then Student should click
+    

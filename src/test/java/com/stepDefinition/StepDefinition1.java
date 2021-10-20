@@ -1117,27 +1117,65 @@ public class StepDefinition1 {
 		System.out.println("save and submit");
 		driver.quit();
 	}
+	
+	
+//	==========================================================================
+	
+	@Given("Student should")
+	public void studentShould() {
+		WebDriverManager.chromedriver().setup();
+		driver=new ChromeDriver();
+		driver.get("https://staging.admin.learnwise.wfglobal.org/");
+		driver.manage().window().maximize();
+		driver.manage().timeouts().implicitlyWait(30,TimeUnit.SECONDS);
+		
+		driver.findElement(By.xpath("//input[@id='input_0']")).sendKeys("akshay@gmail.com");
+		
+		
+//		LoginPom.username(driver).sendKeys("akshay@gmail.com");
+//		LoginPom.nextBtn(driver).click();
+//		LoginPom.passKey(driver).sendKeys("pass");
+//		LoginPom.signin(driver).click();
+	}
+
+	@When("Student should see th")
+	public void studentShouldSeeTh() {
+		WebDriverManager.chromedriver().setup();
+		driver=new ChromeDriver();
+		driver.get("https://staging.admin.learnwise.wfglobal.org/");
+		driver.manage().window().maximize();
+		driver.manage().timeouts().implicitlyWait(30,TimeUnit.SECONDS);
+		
+		driver.findElement(By.xpath("//input[@id='input_0']")).sendKeys("akshay@gmail.com");
+	}
+
+	@Then("Student should click")
+	public void studentShouldClick() {
+	    // Write code here that turns the phrase above into concrete actions
+	    throw new cucumber.api.PendingException();
+	}
 
 
 
 
+	@Given("Student should login to page")
+	public void student_should_login_to_page() {
+	    // Write code here that turns the phrase above into concrete actions
+	    throw new cucumber.api.PendingException();
+	}
 
+	@When("Student should see Courses")
+	public void student_should_see_Courses() {
+	    // Write code here that turns the phrase above into concrete actions
+	    throw new cucumber.api.PendingException();
+	}
 
+	@Then("Student should click on COURSES")
+	public void student_should_click_on_COURSES() {
+	    // Write code here that turns the phrase above into concrete actions
+	    throw new cucumber.api.PendingException();
+	}
 
-
-
-
-
-	//To CLICK ON DELETE BUTTON==============    //span[contains(text(),'Active Batches')]//following::i[2]
-
-
-
-
-	//CLICK ON YES ======TO REOPEN CLOSED BATCH ==================  //span[contains(text(),'Yes')]
-	//
-	//TO REOPEN BATCH  ========================    //body/div[3]/div[1]/div[1]/div[1]/div[2]/md-content[1]/div[1]/div[1]/div[1]/md-content[1]/ul[1]/div[1]/li[17]/div[1]/md-card[1]/md-card-actions[1]/button[1]/span[1]
-	//
-	//     chat to send======   //div[@id='chat_textarea']
 	//
 
 
