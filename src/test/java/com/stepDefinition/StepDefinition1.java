@@ -1738,16 +1738,236 @@ public class StepDefinition1 {
 
 
 
+//======================================================
+//	Student Page
+
+
+
+	@Given("Student should be in Home Page")
+	public void student_should_be_in_Home_Page() {
+		WebDriverManager.chromedriver().setup();
+		driver=new ChromeDriver();
+		driver.get("https://learnwise.wfglobal.org/#/IN/en/home/login");
+		driver.manage().window().maximize();
+		driver.manage().timeouts().implicitlyWait(30,TimeUnit.SECONDS);
+	}
+
+	@When("Should should click on join Course")
+	public void should_should_click_on_join_Course() {
+		LoginPom.username(driver).sendKeys("student1212@yopmail.com");
+		LoginPom.nextBtn(driver).click();
+		LoginPom.passKey(driver).sendKeys("pass");
+		LoginPom.signin(driver).click();
+	}
+
+	@Then("Should should click No button")
+	public void should_should_click_No_button() {
+		LoginPom.courses(driver).click();
+		LoginPom.EnterBatchId(driver).sendKeys("QAPI-2110-DADA");
+		LoginPom.ClickOnJoinBatch(driver).click();
+		LoginPom.Click_On_NoBtn(driver).click();
+		System.out.println("Should should click No button");
+		driver.quit();
+
+	}
+
+
+
+	@Given("Student should login to the Page")
+	public void studentShouldLoginToThePage() {
+		WebDriverManager.chromedriver().setup();
+		driver=new ChromeDriver();
+		driver.get("https://learnwise.wfglobal.org/#/IN/en/home/login");
+		driver.manage().window().maximize();
+		driver.manage().timeouts().implicitlyWait(30,TimeUnit.SECONDS);
+	}
+
+	@When("Should should click on Course")
+	public void shouldShouldClickOnCourse() {
+		LoginPom.username(driver).sendKeys("student1212@yopmail.com");
+		LoginPom.nextBtn(driver).click();
+		LoginPom.passKey(driver).sendKeys("pass");
+		LoginPom.signin(driver).click();
+	}
+
+	@Then("Should should click yes button")
+	public void shouldShouldClickYesButton() {
+		LoginPom.courses(driver).click();
+		LoginPom.EnterBatchId(driver).sendKeys("QAPI-2110-DADA");
+		LoginPom.ClickOnJoinBatch(driver).click();
+		LoginPom.Click_On_YesBtn(driver).click();
+		System.out.println("Should should click yes button");
+		driver.quit();
+	}
 
 
 
 
+	@Given("Student should Be in LOGIN page")
+	public void studentShouldBeInLOGINPage() {
+		WebDriverManager.chromedriver().setup();
+		driver=new ChromeDriver();
+		driver.get("https://learnwise.wfglobal.org/#/IN/en/home/login");
+		driver.manage().window().maximize();
+		driver.manage().timeouts().implicitlyWait(30,TimeUnit.SECONDS);
+	}
+
+	@When("Should should be in Course")
+	public void shouldShouldBeInCourse() {
+		LoginPom.username(driver).sendKeys("student1212@yopmail.com");
+		LoginPom.nextBtn(driver).click();
+		LoginPom.passKey(driver).sendKeys("pass");
+		LoginPom.signin(driver).click();
+	}
+
+	@Then("Should should click on Batch Name")
+	public void shouldShouldClickOnBatchName() throws Exception {
+		LoginPom.courses(driver).click();
+		LoginPom.EnterBatchId(driver).sendKeys("QAPI-2110-DADA");
+		LoginPom.ClickOnJoinBatch(driver).click();
+		LoginPom.Click_On_YesBtn(driver).click();
+		Thread.sleep(3000);
+		System.out.println("Should should click on Batch Name");
+		driver.quit();
+	}
+
+
+	@Given("student be in CourseModule")
+	public void studentBeInCourseModule() {
+		WebDriverManager.chromedriver().setup();
+		driver=new ChromeDriver();
+		driver.get("https://learnwise.wfglobal.org/#/IN/en/home/login");
+		driver.manage().window().maximize();
+		driver.manage().timeouts().implicitlyWait(30,TimeUnit.SECONDS);
+	}
+
+	@When("Should should Join course")
+	public void shouldShouldJoinCourse() {
+		LoginPom.username(driver).sendKeys("student1212@yopmail.com");
+		LoginPom.nextBtn(driver).click();
+		LoginPom.passKey(driver).sendKeys("pass");
+		LoginPom.signin(driver).click();
+	}
+
+	@Then("Should should click on Batch_Name")
+	public void shouldShouldClickOnBatch_Name() throws Exception {
+		LoginPom.courses(driver).click();
+		LoginPom.Click_on_batchName(driver).click();
+		Thread.sleep(3000);
+		driver.quit();
+	}
 
 
 
+	@Given("Student ShouldBe in course module")
+	public void studentShouldBeInCourseModule() {
+		WebDriverManager.chromedriver().setup();
+		driver=new ChromeDriver();
+		driver.get("https://learnwise.wfglobal.org/#/IN/en/home/login");
+		driver.manage().window().maximize();
+		driver.manage().timeouts().implicitlyWait(30,TimeUnit.SECONDS);
+	}
+
+	@When("Should should see chat icon")
+	public void shouldShouldSeeChatIcon() {
+		LoginPom.username(driver).sendKeys("student1212@yopmail.com");
+		LoginPom.nextBtn(driver).click();
+		LoginPom.passKey(driver).sendKeys("pass");
+		LoginPom.signin(driver).click();
+	}
+
+	@Then("Should should click on chat icon")
+	public void shouldShouldClickOnChatIcon() {
+		LoginPom.courses(driver).click();
+		driver.findElement(By.xpath("//i[@class='fa fa-comments fa_icon_font click_able']")).click();
+		driver.quit();
+
+	}
+
+
+	@Given("Student ShouldBe in enrolled courses")
+	public void studentShouldBeInEnrolledCourses() {
+		WebDriverManager.chromedriver().setup();
+		driver=new ChromeDriver();
+		driver.get("https://learnwise.wfglobal.org/#/IN/en/home/login");
+		driver.manage().window().maximize();
+		driver.manage().timeouts().implicitlyWait(30,TimeUnit.SECONDS);
+	}
+
+	@When("Should should click on BatchNAME")
+	public void shouldShouldClickOnBatchNAME() {
+		LoginPom.username(driver).sendKeys("student1212@yopmail.com");
+		LoginPom.nextBtn(driver).click();
+		LoginPom.passKey(driver).sendKeys("pass");
+		LoginPom.signin(driver).click();
+	}
+
+	@Then("Should should click on Quizzes")
+	public void shouldShouldClickOnQuizzes() {
+		LoginPom.courses(driver).click();
+		LoginPom.Click_on_batchName(driver).click();
+		driver.findElement(By.xpath("//a[contains(text(),'Quizzes')]")).click();
+		driver.quit();
+	}
 
 
 
+	@Given("Student ShouldBe in enrollCourses")
+	public void studentShouldBeInEnrollCourses() {
+		WebDriverManager.chromedriver().setup();
+		driver=new ChromeDriver();
+		driver.get("https://learnwise.wfglobal.org/#/IN/en/home/login");
+		driver.manage().window().maximize();
+		driver.manage().timeouts().implicitlyWait(30,TimeUnit.SECONDS);
+	}
+
+	@When("Should should click on QUiZZes tab")
+	public void shouldShouldClickOnQUiZZesTab() {
+		LoginPom.username(driver).sendKeys("student1212@yopmail.com");
+		LoginPom.nextBtn(driver).click();
+		LoginPom.passKey(driver).sendKeys("pass");
+		LoginPom.signin(driver).click();
+	}
+
+	@Then("Should should click on Take Quizz")
+	public void shouldShouldClickOnTakeQuizz() throws Exception {
+		LoginPom.courses(driver).click();
+		LoginPom.Click_on_batchName(driver).click();
+		driver.findElement(By.xpath("//a[contains(text(),'Quizzes')]")).click();
+		driver.findElement(By.xpath("//span[contains(text(),'Quizzes')]//following::a[1]")).click();
+		Thread.sleep(3000);		
+		driver.quit();
+		
+	}
+	
+	
+
+@Given("Student ShouldBe in COURSEPAGe")
+public void studentShouldBeInCOURSEPAGe() {
+	WebDriverManager.chromedriver().setup();
+	driver=new ChromeDriver();
+	driver.get("https://learnwise.wfglobal.org/#/IN/en/home/login");
+	driver.manage().window().maximize();
+	driver.manage().timeouts().implicitlyWait(30,TimeUnit.SECONDS);
+}
+
+@When("Should should see save and continue")
+public void shouldShouldSeeSaveAndContinue() {
+	LoginPom.username(driver).sendKeys("student1212@yopmail.com");
+	LoginPom.nextBtn(driver).click();
+	LoginPom.passKey(driver).sendKeys("pass");
+	LoginPom.signin(driver).click();
+
+}
+
+@Then("Should should click on save and continue")
+public void shouldShouldClickOnSaveAndContinue() {
+	LoginPom.courses(driver).click();
+	LoginPom.Click_on_batchName(driver).click();
+	driver.findElement(By.xpath("//a[contains(text(),'Quizzes')]")).click();
+	driver.findElement(By.xpath("//span[contains(text(),'Quizzes')]//following::a[1]")).click();
+	LoginPom.ClickOnSaveAndContinue(driver).click();
+}
 
 
 
@@ -1762,3 +1982,13 @@ public class StepDefinition1 {
 
 
 }
+
+
+
+
+
+
+
+//QAPI-2110-DADA
+
+
